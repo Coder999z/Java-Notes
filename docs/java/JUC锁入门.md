@@ -726,3 +726,6 @@
 > ```
 >
 > Demo中前两个Work需要获取5个信号量，Semaphore中余量符合，因此Thread-0和1并发执行，而Thread-2需要7个信号量，因此需要等待Thread-0和1release后才足够获取，因此Thread-2在最后等待了两秒后才执行。
+
+## 参考
+> https://www.cnblogs.com/skywang12345/p/java_threads_category.html
