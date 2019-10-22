@@ -24,7 +24,7 @@
 
 ### 类结构
 
-> ![1570674338614](D:\临时截图\1570674338614.png)
+> ![1570674338614](https://github.com/Coder999z/Java-Notes/blob/master/img/1/1570674338614.png)
 >
 > **Node：**
 >
@@ -53,7 +53,7 @@
 
 > **类结构**
 >
-> ![1570673964885](D:\临时截图\1570673964885.png)
+> ![1570673964885](https://github.com/Coder999z/Java-Notes/blob/master/img/1/1570673964885.png)
 >
 > - FairSync和NofairSync分别是公平锁和非公平锁的实现
 > - ReentrantLock中的成员变量sync指向具体的锁实现类
@@ -289,7 +289,7 @@
 
 ### 结合CountDownLatch
 
-> ![1570690578379](D:\临时截图\1570690578379.png)
+> ![1570690578379](https://github.com/Coder999z/Java-Notes/blob/master/img/1/1570690578379.png)
 >
 > AQS中state在这用来存栅栏的数量
 
