@@ -94,7 +94,7 @@ Java基础多线程（四）volatile
 
 > [MySQL基于MyCat读写分离](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/读写分离.md)
 
-> [MySQL负载均衡与高可用](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/负载均衡.md)
+> [MySQL基于MyCat负载均衡与高可用](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/负载均衡.md)
 
 
 ## 手写系列 
