@@ -20,6 +20,12 @@
 
 > [synchronized关键字](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/synchronized关键字.md)
 
+> [wait()、notify()详解](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/synchronized2.md)
+
+> [yield、sleep、join、interrupt详解](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/synchronized3.md)
+
+> [volatile原理分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/volatile原理分析.md)
+
 > [JUC常用锁入门](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/JUC锁入门.md)
 
 > [JUC常用锁源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/JUC锁源码分析.md)
