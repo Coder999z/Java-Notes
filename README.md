@@ -35,15 +35,6 @@
 
 > [JUC常用锁源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/JUC锁源码分析.md)
 
-
-
-
-Java基础多线程（二）线程等待和唤醒wait()、notify()注释源码分析
-Java基础多线程（三）yield、sleep、join、interrupt源码分析
-Java基础多线程（四）volatile
-
-
-
 ### 集合相关
 > [HashMap源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/HashMap源码.md)
 
