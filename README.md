@@ -21,6 +21,24 @@
 ### 集合相关
 > [HashMap源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/HashMap源码.md)
 
+> [ArrayList、Vector源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/ArrayList、Vector源码分析.md)
+
+> [LinkedList源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/LinkedList源码解析.md)
+
+> [Hashtable源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/Hashtable源码分析.md)
+
+> [Iterator、Enumeration和fail-fast](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/Iterator、Enumeration和fail-fast.md)
+
+> [WeakHashMap源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/WeakHashMap源码分析.md)
+
+> [HashSet源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/HashSet源码分析.md)
+
+> [TreeMap源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/TreeMap源码分析.md)
+
+> [LinkedHashMap源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/LinkedHashMap源码分析.md)
+
+> [LinkedHashSet源码分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/LinkedHashSet源码分析.md)
+
 ## 框架篇
 ### Spring
 > [SpringIOC和DI分析](https://github.com/Coder999z/Java-Notes/blob/master/docs/framework/spring/SpringIOC和DI原理分析.md)
@@ -36,7 +54,11 @@
 > [SpringMVC常用注解](https://github.com/Coder999z/Java-Notes/blob/master/docs/framework/spring/SpringMVC常用注解.md)
 
 ### MyBatis
+> [MyBatis配置文件详解](https://github.com/Coder999z/Java-Notes/blob/master/docs/framework/mybatis/MyBatis配置文件详解.md)
+
 > [MyBatis工作原理](https://github.com/Coder999z/Java-Notes/blob/master/docs/framework/mybatis/MyBatis工作原理.md)
+
+> [MyBatis多数据源](https://github.com/Coder999z/Java-Notes/blob/master/docs/framework/mybatis/MyBatis多数据源.md)
 
 
 
