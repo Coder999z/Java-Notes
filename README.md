@@ -91,6 +91,8 @@
 ## 手写系列 
 > [Java手写单例模式](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/Java手写单例模式.md)
 
+> [Java手写机票监控爬虫](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/机票.md)
+
 > Java手写AOP
 
 > Java手写IOC
@@ -100,8 +102,10 @@
 
 > [内存管理](https://github.com/Coder999z/Java-Notes/blob/master/docs/os/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B9%8B%E5%86%85%E5%AD%98.md)
  
->[进程与线程](https://github.com/Coder999z/Java-Notes/blob/master/docs/os/操作系统之进程.md)
+> [进程与线程](https://github.com/Coder999z/Java-Notes/blob/master/docs/os/操作系统之进程.md)
  
 > [同步互斥与信号量](https://github.com/Coder999z/Java-Notes/blob/master/docs/os/操作系统之同步与信号量.md)
+
+> [死锁及拓展](https://github.com/Coder999z/Java-Notes/blob/master/docs/os/死锁.md)
 ## 数据结构
 > [哈夫曼树](https://github.com/Coder999z/Java-Notes/blob/master/docs/datastructure/哈夫曼树.md)
