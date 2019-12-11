@@ -81,7 +81,7 @@
 ## MySQL
 > [MySQL两种数据库引擎对比](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/引擎对比.md)
 
-> [MySQL索引原理](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/MySQL索引原理.md)
+> [MySQL索引原理](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/索引.md)
 
 > [MySQL中的锁和MVCC](https://github.com/Coder999z/Java-Notes/blob/master/docs/java/mysql/锁和MVCC.md)
 

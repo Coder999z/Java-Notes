@@ -1,5 +1,3 @@
-# 开头
-
 > 环境：
 >
 > mysql:5.7
@@ -18,7 +16,7 @@
 
 > 下图中是一颗三阶B+Tree
 >
-> ![img](https://github.com/Coder999z/Java-Notes/blob/master/img/1/QQ20191205-150910.png)
+> ![img](/Users/wang/dev/environment/临时截图/QQ20191205-150910.png)
 >
 > - 图中，页33、页30等表示的是`InnoDB中的“页”`，在磁盘中的表现形式也是磁盘页（例如InnoDB中设置页大小为8kb，那么一个DB的页在磁盘中就是两个连续地址的磁盘页）
 > - 在B+树的非叶节点中不存储数据，如磁页30、33、32中，只顺序存放了`页地址`和`主键`的键值。所有的数据都存储在叶子节点中。并且最底层的叶子节点是一个`双向链表`。
@@ -46,7 +44,7 @@
 > >
 > > **模拟查找普通索引为2的记录：**
 > >
-> > ![image-20191205153457874](https://github.com/Coder999z/Java-Notes/blob/master/img/1/image-20191205153457874.png)
+> > ![image-20191205153457874](/Users/wang/dev/environment/临时截图/image-20191205153457874.png)
 > >
 > > - 读取页44，对比2 < 4 < 9，获得页42地址     **【第一次IO】**
 > > - 读取页42，获得页34地址                              **【第二次IO】**
@@ -88,14 +86,14 @@
 > > 1. 从索引a的B+树中获得a = 1的所有记录的主键，共100W条
 > > 2. 根据这100W条主键回表查询出对应的记录，再筛选出b = 2，c = 3的记录。看起来效率并不乐观
 > >
-> > ![](https://github.com/Coder999z/Java-Notes/blob/master/img/1/QQ20191209-154841.png)
+> > ![](/Users/wang/dev/environment/临时截图/QQ20191209-154841.png)
 >
 > 若针对表中a、b、c三个列创建了联合主键后查询的步骤为：
 >
 > > 1. 从符合索引(a,b,c)的B+树中获得条件的所有记录的主键
 > > 2. 回表查询数据
 > >
-> > ![](https://github.com/Coder999z/Java-Notes/blob/master/img/1/QQ20191209-155020.png)
+> > ![](/Users/wang/dev/environment/临时截图/QQ20191209-155020.png)
 >
 > **复合索引适合在由多个列来确定一行或者多行数据时使用**
 >
@@ -121,7 +119,7 @@
 > >
 > > 复合索引树的数据结构：
 > >
-> > ![image-20191205153457874](https://github.com/Coder999z/Java-Notes/blob/master/img/1/QQ20191205-164932.png)
+> > ![image-20191205153457874](/Users/wang/dev/environment/临时截图/QQ20191205-164932.png)
 > >
 > > (a,b,c)符合索引的B+树结构和其他索引完全相同，只有在叶子节点中存储的数据有所不同，可以发现`B+树是由列a组织起来的，叶子节点的数据是按照(a,b,c)三个索引的顺序进行排序的`。
 > >
@@ -209,7 +207,7 @@
 >
 > 在这条SQL中，查询的b、c列正好是复合索引中的列，那么在where条件正确的按照复合索引树检索时可以直接从复合索引树上拿到b和c的数据，那么就无需回表操作了，这也是提升性能的一种方式。
 >
-> ![](https://github.com/Coder999z/Java-Notes/blob/master/img/1/QQ20191209-155446.png)
+> ![](/Users/wang/dev/environment/临时截图/QQ20191209-155446.png)
 >
 > > 还是举个例子，在道具发放时，需要查询是否重复发放，需要从几个亿的大表里查询sn是否已经存在，那么肯定针对sn字段添加了索引，那么仅仅只是查重无需返回其他字段的数据，使用覆盖索引显然效率更高。
 
@@ -445,7 +443,7 @@
 > >
 > > 此SQL中条件是主键的精确查询，所以只需要在该主键上加上X锁（X RL）。
 > >
-> > ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/HR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhp.png)
+> > ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/HR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhp.png)
 >
 > > **条件为唯一索引时**
 > >
@@ -455,7 +453,7 @@
 > >
 > > 当条件变为唯一索引时，select语句先去索引树中查找对应的记录为索引加上X锁，并根据主键name回表查询真正的记录行也要为主键加上X锁。
 > >
-> > ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE4NDc2OQ.png)
+> > ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzE4NDc2OQ.png)
 >
 > “表锁”（并非真正意义的表锁，只是所有记录都上锁了）：
 >
@@ -467,7 +465,7 @@
 > >
 > > 此时因为条件并不走索引，所以会进行全表的扫描，所有的记录主键都会被加上X锁，此时的影响是最大的，其他需要加行锁的事务都需要等待表锁释放，严重影响吞吐量。这个是开发中要重点避免的情况，需要结合上文中的内容判断索引是否失效。
 > >
-> > ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/_16,color_FFFFFF,t_70.png)
+> > ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/_16,color_FFFFFF,t_70.png)
 
 ## Gap锁/NK锁
 
@@ -484,7 +482,7 @@
 >
 > 如图所示id为普通索引，MySQL在id索引树上为id = 10加上了NK锁，索引加上了R锁，间隙之间加上了Gap锁，也就是为id加上了NK锁。主键B+树则是只为主键加上了R锁。
 >
-> ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/0001.png)
+> ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/0001.png)
 >
 > 主键的索引树上不加Gap锁是因为主键是唯一的，不会造成幻读。
 
@@ -495,7 +493,7 @@
 >
 > 此时的id已经不再是索引了，以id为查询条件会导致全表扫描，会对所有记录加上NK锁，对性能影响较大。
 >
-> ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/0002.png)
+> ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/0002.png)
 
 ## Auto-inc Locks自增锁
 
@@ -674,13 +672,13 @@
 >
 > 循环提交：
 >
-> > ![image-20191203152631960](https://github.com/Coder999z/Java-Notes/blob/master/img/1/image-20191203152631960.png)
+> > ![image-20191203152631960](/Users/wang/dev/environment/临时截图/image-20191203152631960.png)
 >
 > 
 >
 > 批量提交：
 >
-> > ![image-20191203152720138](https://github.com/Coder999z/Java-Notes/blob/master/img/1/20191203152720138.png)
+> > ![image-20191203152720138](/Users/wang/dev/environment/临时截图/20191203152720138.png)
 >
 > 
 
@@ -694,7 +692,7 @@
 
 > 例1：
 >
-> ![在这里插入图片描述](https://github.com/Coder999z/Java-Notes/blob/master/img/1/0003.png)
+> ![在这里插入图片描述](/Users/wang/dev/environment/临时截图/0003.png)
 >
 > 这个例子中两个事务都是只有一条SQL，但是依然可能导致死锁，原因就在于InnoDB引擎对索引是逐个加锁的，并不是一个原子操作。
 >
@@ -782,7 +780,7 @@
 >
 > 综上整理一下思路：
 >
-> ![有向图](https://github.com/Coder999z/Java-Notes/blob/master/img/1/20191202164008310.png)
+> ![有向图](/Users/wang/dev/environment/临时截图/20191202164008310.png)
 >
 > 在表中数据少于200时，Update事务走全表扫描，会对全表的索引记录加上NK锁，这个是发生死锁的核心原因。结合图中的执行顺序也就不难理解了。
 
@@ -792,4 +790,4 @@
 >
 > **wait-for graph：** 和超时等待相比，等待图是更为主动的死锁检测机制，InnoDB也是采用这种方式检测死锁。它利用了数据结构“图”的特性描述事务之间的等待关系。在每个事务请求锁发生等待时，就会判断图中是否存在回路，如果存在则表示发生了死锁，InnoDB就会选择undo量最小的事务回滚。
 >
-> ![q](https://github.com/Coder999z/Java-Notes/blob/master/img/1/image-20191202141621255.png)
+> ![q](/Users/wang/dev/environment/临时截图/image-20191202141621255.png)
